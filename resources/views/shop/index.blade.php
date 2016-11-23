@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-	Laravel Shopping Cart
+	Ecommerce Laravel
 @endsection
 
 @section('content')
@@ -24,8 +24,8 @@
         <h3>{{ $product->title }}</h3>
         <p class="description">{{ $product->description }}</p>
         <div class="clearfix">
-			<div class="pull-left price">${{ $product->price }}</div>
-        	<a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-success pull-right" role="button">Add to Cart</a>
+			<div class="pull-left price">R${{ $product->price }}</div>
+        	<a href="{{ route('product.addToCart', ['id' => $product->id]) }}" class="btn btn-success pull-right" role="button">Adicionar ao Carrinho</a>
         </div>
       </div>
     </div>
